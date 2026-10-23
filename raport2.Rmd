@@ -821,6 +821,7 @@ Jesteś agentem / agentką nieruchomości. Klient oczekuje od Ciebie  zestawieni
 -pokaż je według typu,
 -posortuj tylko 5 mieszkań od najdroższych, pamiętając o tym, żeby były również jak największej powierzchni
 -wyswietl tylko adres, powierzchnię, cenę
+
 ```{r}
 dane %>% 
   mutate(m2=sq__ft * 0.0929) %>% 
@@ -831,10 +832,3 @@ dane %>%
   head(5)
 
 ```
-
-
-```{r}
-dane %>%
-  filter
-```
-
