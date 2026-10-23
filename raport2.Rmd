@@ -812,3 +812,29 @@ Zadanie wykonaj w kilku etapach:
 4.  Napisz własną funkcję, która wykonywać będzie standaryzowanie zmiennych.
 5.  Utwórz nową zmienną "cena" w tibble "dane2", która będzie zestandaryzowaną price, korzystając z własnej funkcji.
 6.  Wykreśl cenę oraz price na wykresach ramkowych obok siebie na jednym ekranie. Różnice?
+
+# Zadanie do wykonania
+Jesteś agentem / agentką nieruchomości. Klient oczekuje od Ciebie  zestawienia:
+-mieszkanie do 100 m2,
+-jedna sypialnia,
+-jedna łazienka,
+-pokaż je według typu,
+-posortuj tylko 5 mieszkań od najdroższych, pamiętając o tym, żeby były również jak największej powierzchni
+-wyswietl tylko adres, powierzchnię, cenę
+```{r}
+dane %>% 
+  mutate(m2=sq__ft * 0.0929) %>% 
+  filter(m2<100 & beds==1 & baths==1) %>%
+  group_by(type) %>%
+  arrange(desc(price), desc(m2)) %>% 
+  select (street, city, zip, state, m2, price) %>%
+  head(5)
+
+```
+
+
+```{r}
+dane %>%
+  filter
+```
+
