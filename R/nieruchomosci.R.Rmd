@@ -1,0 +1,5 @@
+---
+title: "nieruchomosci.R"
+output: html_document
+---
+
